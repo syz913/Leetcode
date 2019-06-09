@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int mySqrt(int x) {
+        int a = 0, b = 46340;
+        while (a <= b) {
+            int k = (a + b)/2;
+            if (k*k == x) return k;
+            if ((k*k) > x && ((k-1) * (k-1)) <= x) return k-1;
+            if (k*k < x) a = k + 1;
+            else b = k-1;
+        }
+        return 46340;
+    }
+};
