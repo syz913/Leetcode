@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int climbStairs(int n) {
+        int a_0 = 1, a_n = 1;
+        for (int i = 1; i < n; i++) {
+            int temp = a_n;
+            a_n += a_0;
+            a_0 = temp;
+        }
+        return a_n;
+    }
+};
