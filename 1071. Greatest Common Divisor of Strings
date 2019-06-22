@@ -1,0 +1,15 @@
+class Solution {
+public:
+    string gcdOfStrings(string str1, string str2) {
+        int m = str1.size(), n = str2.size();
+        if(m < n) {
+            swap(str1, str2);
+            swap(m, n);
+        }
+        if(m == n && str1 == str2) return str1;
+        for(int i = 0; i < n; i ++)
+            if(str1[i] != str2[i])
+                return "";
+        return gcdOfStrings(str1.substr(n, n - m), str2);
+    }
+};
