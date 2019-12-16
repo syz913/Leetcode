@@ -1,0 +1,11 @@
+/*
+description：
+1
+[1]1
+[2]1
+[1]2[1]1
+[1]1[1]2[2]1
+Ignore the 1, 2, 3, 4, 5 in the directions, 
+the pattern is only looking at the pattern before it and spelling out the previous pattern with numbers.
+I thought the row numbers were related and couldn't figure out how but they are not.
+*/
